@@ -1,12 +1,6 @@
-let num = 1;
-// データの保存
-sessionStorage.setItem('access_count', num);
-window.sessionStorage.setItem('access_count', num);
-sessionStorage.access_count = num
-num = sessionStorage.getItem('access_count');
-num = window.sessionStorage.getItem('access_count');
-num = sessionStorage.access_count
-sessionStorage.removeItem('access_count');
-window.sessionStorage.removeItem('access_count');
-sessionStorage.clear();
-window.sessionStorage.clear();
+// フォームから入力されたログイン情報を取得する
+var username = document.getElementById('username').value;
+var password = document.getElementById('password').value;
+// ログイン情報をLocalStorageに保存する
+localStorage.setItem('username', username);
+localStorage.setItem('password', password);
