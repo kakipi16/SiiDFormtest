@@ -1,12 +1,12 @@
-// アクセスカウントの初期化または取得
-let accessCount = sessionStorage.getItem('access_count') || 0;
-accessCount = parseInt(accessCount) + 1;
-
-// 新しいカウントを保存
-sessionStorage.setItem('access_count', accessCount);
-
-// 必要に応じてカウントを取得
-const currentCount = sessionStorage.getItem('access_count');
-
-// セッションストレージをクリアする場合
-// sessionStorage.clear();
+let num = 1;
+// データの保存
+sessionStorage.setItem('access_count', num);
+window.sessionStorage.setItem('access_count', num);
+sessionStorage.access_count = num
+num = sessionStorage.getItem('access_count');
+num = window.sessionStorage.getItem('access_count');
+num = sessionStorage.access_count
+sessionStorage.removeItem('access_count');
+window.sessionStorage.removeItem('access_count');
+sessionStorage.clear();
+window.sessionStorage.clear();
