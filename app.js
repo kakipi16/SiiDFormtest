@@ -10,7 +10,9 @@ document.querySelector('.signinForm').addEventListener('submit', function(event)
     // ログイン情報をLocalStorageに保存する
     localStorage.setItem('username', username);
     localStorage.setItem('password', password);
-    
+
+    localStorage.getItem('username', username);
+    localStorage.getItem('password', password);
     // 保存完了のメッセージを表示（オプション）
     alert('ログイン情報が保存されました');
 });
